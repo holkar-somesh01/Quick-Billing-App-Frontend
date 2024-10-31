@@ -55,7 +55,7 @@ const Login = () => {
   }, [isSuccess]);
   useEffect(() => {
     if (isError) {
-      toast.error(`${JSON.stringify(error, null, 2)}`, {
+      toast.error(`${error.data.message}`, {
         theme: "dark",
         position: "top-center",
       });
@@ -183,7 +183,7 @@ const VerifyOTP = ({ adminData, setAdminData }) => {
   }, [isSuccess]);
   useEffect(() => {
     if (isError) {
-      toast.error(`${JSON.stringify(error, null, 2)}`, {
+      toast.error(`${error.data.message}`, {
         theme: "dark",
         position: "top-center",
       });

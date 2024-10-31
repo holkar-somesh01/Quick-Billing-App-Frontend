@@ -60,6 +60,14 @@ const AllProducts = () => {
       toast.success("Product Update Success");
     }
   }, [isSuccessUpdate]);
+  useEffect(() => {
+    if (isErrorUpdate) {
+      toast.error(`${ErrorUpdate.data.message}`, {
+        theme: "dark",
+        position: "top-center",
+      });
+    }
+  }, [isErrorUpdate])
   return (
     <div>
       <div className="bg-white h-screen overflow-scroll">
@@ -107,7 +115,7 @@ const AllProducts = () => {
                           Edit
                         </button>
                         <button
-                          onClick={(e) => {}}
+                          onClick={(e) => { }}
                           className="btn btn-primary text-white"
                         >
                           Delete

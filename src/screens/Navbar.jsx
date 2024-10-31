@@ -25,7 +25,7 @@ const Navbar = () => {
   }, [isSuccess]);
   useEffect(() => {
     if (isError) {
-      toast.warn(`${JSON.stringify(error, null, 2)}`, {
+      toast.warn(`${error.data.message}`, {
         theme: "dark",
         position: "top-center",
       });

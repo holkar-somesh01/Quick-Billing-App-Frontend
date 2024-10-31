@@ -49,6 +49,14 @@ const AddCustomer = () => {
       });
     }
   }, [isSuccess]);
+  useEffect(() => {
+    if (isError) {
+      toast.error(`${error.data.message}`, {
+        theme: "dark",
+        position: "top-center",
+      });
+    }
+  }, [isError]);
   return (
     <>
       <div className="bg-white h-[100%]">

@@ -47,7 +47,7 @@ const Register = () => {
   }, [isSuccess]);
   useEffect(() => {
     if (isError) {
-      toast.error(`Invalid Cradiantials`, {
+      toast.error(`${error.data.message}`, {
         theme: "dark",
         position: "top-center",
       });

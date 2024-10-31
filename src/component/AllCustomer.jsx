@@ -13,6 +13,7 @@ import {
 import Navbar from "../screens/Navbar";
 import BillCreate from "./BillCreate";
 import CustomerProfile from "./CustomerProfile";
+import { toast } from "react-toastify";
 
 const AllCustomer = () => {
   const navigate = useNavigate();
@@ -25,6 +26,14 @@ const AllCustomer = () => {
   useEffect(() => {
     FetchCustomer(admin._id);
   }, []);
+  useEffect(() => {
+    if (isError) {
+      toast.error(`${error.data.message}`, {
+        theme: "dark",
+        position: "top-center",
+      });
+    }
+  }, [isError])
   return (
     <>
       {navigateCompo === "bank" ? (

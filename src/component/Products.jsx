@@ -64,6 +64,15 @@ const Products = () => {
       });
     }
   }, [isSuccess]);
+  useEffect(() => {
+    if (isError) {
+      // toast.error(`${error&&error.data.message}`, {
+      toast.error(`${JSON.stringify(error)}`, {
+        theme: "dark",
+        position: "top-center",
+      });
+    }
+  }, [isError]);
   return (
     <>
       <div className="">

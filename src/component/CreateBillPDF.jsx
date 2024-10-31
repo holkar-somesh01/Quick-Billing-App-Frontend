@@ -21,7 +21,10 @@ const CreateBillPDF = ({ setPdfNavigate, totalBillData, customerData }) => {
   }, [isSuccess]);
   useEffect(() => {
     if (isError) {
-      toast.success("Unble To Send Bill To User Email");
+      toast.success(`${error.data.message}`, {
+        theme: "dark",
+        position: "top-center"
+      });
     }
   }, [isError]);
   const componentRef = useRef();
