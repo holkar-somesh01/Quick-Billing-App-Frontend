@@ -71,7 +71,7 @@ const AllProducts = () => {
   return (
     <div>
       <div className="bg-white h-screen overflow-scroll">
-        <div className="fixed w-[1050px]">
+        <div className="fixed w-full">
           <Subnav />
         </div>
         <div>

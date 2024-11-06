@@ -33,8 +33,8 @@ const Navbar = () => {
   }, [isError]);
   return (
     <>
-      <div className="bg-white w-[100%] p-2">
-        <div className="flex gap-10">
+      <div className="bg-white w-full p-2">
+        <div className="flex gap-10 w-full">
           <div className="flex gap-2">
             <input
               type="text"
@@ -93,7 +93,7 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <div className="flex border-l-2 gap-5">
+          <div className="justify-end flex gap-5 w-full">
             <span className="text-slate-500 text-xl mt-3 ms-3">
               <FaBell />
             </span>

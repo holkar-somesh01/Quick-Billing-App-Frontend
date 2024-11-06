@@ -59,7 +59,7 @@ const AddCustomer = () => {
   }, [isError]);
   return (
     <>
-      <div className="bg-white h-[100%]">
+      <div className="bg-white h-screen">
         <div className="text-white bg-slate-200 p-5 flex justify-between">
           <div className="flex gap-5">
             <FaMagnifyingGlass className="text-black mt-2" />

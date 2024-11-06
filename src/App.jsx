@@ -34,7 +34,7 @@ const App = () => {
         {isLogin ? (
           <div className="flex">
             <span className="flex-1">
-              <SideBar />
+              {/* <SideBar /> */}
             </span>
             <div className="w-full">
               <Routes>

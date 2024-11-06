@@ -77,7 +77,7 @@ const Products = () => {
     <>
       <div className="">
         <div className="bg-white h-screen overflow-scroll">
-          <div className="w-[1050px] fixed z-10">
+          <div className="w-full fixed z-10">
             <Subnav />
           </div>
 

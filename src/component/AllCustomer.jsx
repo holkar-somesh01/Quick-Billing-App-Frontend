@@ -38,7 +38,7 @@ const AllCustomer = () => {
     <>
       {navigateCompo === "bank" ? (
         <div className="bg-white h-screen overflow-scroll">
-          <div className="border-b-2 border-slate-400 shadow-slate-500 shadow-md fixed">
+          <div className="border-b-2 border-slate-400 shadow-slate-500 shadow-md fixed w-full">
             <Navbar />
           </div>
           <div className="flex justify-end px-10 pt-5 mt-20">
