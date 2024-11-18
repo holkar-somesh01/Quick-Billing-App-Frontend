@@ -18,6 +18,7 @@ import SideBar from "./screens/Sidebar";
 import UpdateProfile from "./Authentication/UpdateProfile";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/ReactToastify.min.css";
+import PaginationTable from "./paggination/paggination";
 
 const App = () => {
   const { admin } = useSelector((state) => state.AdminAuth);
@@ -28,37 +29,38 @@ const App = () => {
     }, 50);
   }, [admin]);
   return (
-    <ContextProvider>
-      <ToastContainer />
-      <BrowserRouter>
-        {isLogin ? (
-          <div className="flex">
-            <span className="flex-1">
-              {/* <SideBar /> */}
-            </span>
-            <div className="w-full">
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/customer" element={<AddCustomer />} />
-                <Route path="/bank" element={<AllCustomer />} />
-                <Route path="/add-sale" element={<AddSale />} />
-                <Route path="/update-profile" element={<UpdateProfile />} />
-                <Route path="/Products" element={<Products />} />
-                <Route path="/fetch-products" element={<AllProducts />} />
-                <Route path="/sales" element={<Sales />} />
-              </Routes>
-            </div>
-          </div>
-        ) : (
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        )}
-      </BrowserRouter>
-    </ContextProvider>
+    <PaginationTable />
+    // <ContextProvider>
+    //   <ToastContainer />
+    //   <BrowserRouter>
+    //     {isLogin ? (
+    //       <div className="flex">
+    //         <span className="flex-1">
+    //           {/* <SideBar /> */}
+    //         </span>
+    //         <div className="w-full">
+    //           <Routes>
+    //             <Route path="/" element={<HomePage />} />
+    //             <Route path="/customer" element={<AddCustomer />} />
+    //             <Route path="/bank" element={<AllCustomer />} />
+    //             <Route path="/add-sale" element={<AddSale />} />
+    //             <Route path="/update-profile" element={<UpdateProfile />} />
+    //             <Route path="/Products" element={<Products />} />
+    //             <Route path="/fetch-products" element={<AllProducts />} />
+    //             <Route path="/sales" element={<Sales />} />
+    //           </Routes>
+    //         </div>
+    //       </div>
+    //     ) : (
+    //       <Routes>
+    //         <Route path="/" element={<Home />} />
+    //         <Route path="/login" element={<Login />} />
+    //         <Route path="/register" element={<Register />} />
+    //         <Route path="*" element={<NotFound />} />
+    //       </Routes>
+    //     )}
+    //   </BrowserRouter>
+    // </ContextProvider>
   );
 };
 
