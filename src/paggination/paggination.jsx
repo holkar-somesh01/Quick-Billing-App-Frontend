@@ -19,7 +19,7 @@ const PaginationTable = () => {
         if (activeButton) {
             activeButton.scrollIntoView({ behavior: "smooth", inline: "center" });
         }
-    }, [currentPage]);
+    }, [currentPage])
 
     const handlePageChange = (page) => {
         if (page >= 1 && page <= totalPages) {
