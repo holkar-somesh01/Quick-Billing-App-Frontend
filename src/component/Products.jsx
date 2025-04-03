@@ -276,6 +276,12 @@ const Subnav = () => {
             >
               View Products
             </button>
+            <button
+              onClick={(e) => navigate("/")}
+              className="btn-sm rounded-md bg-indigo-600"
+            >
+              Back
+            </button>
           </div>
         </div>
       </div>

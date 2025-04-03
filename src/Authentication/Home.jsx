@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import AppLogo from '../assets/app-logo.png'
+
 const Home = () => {
   const navigate = useNavigate();
   const { admin } = useSelector((state) => state.AdminAuth);
@@ -15,11 +17,12 @@ const Home = () => {
       <div className="h-screen bg-white">
         <div className="bg-white h-16 flex items-center justify-between shadow-md shadow-slate-800">
           <div className="text-center ps-10">
-            <img
-              className="object-contain h-full w-24"
-              src="https://vyapar.com/wp-content/uploads/2023/04/vyapar-app-logo.png"
+            <img className="h-14 w-14" src={AppLogo} alt="" />
+            {/* <img
+              className="object-contain w-24"
+              src={AppLogo}
               alt=""
-            />
+            /> */}
           </div>
           <div className="flex gap-10 text-black pe-10">
             <p className="font-semibold">
